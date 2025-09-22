@@ -13,6 +13,7 @@
   <div class="header"><h2>💫 Meeting Room Booking</h2></div>
   <div class="form-container">
 
+    <!-- Main intent screen -->
     <div id="intentScreen">
       <label>🎯 เลือกการทำงาน</label>
       <div class="intention-grid">
@@ -22,6 +23,7 @@
       </div>
     </div>
 
+    <!-- Book form -->
     <form id="mainForm" style="display:none">
       <div class="form-group">
         <label>📋 หัวข้อประชุม</label>
@@ -50,11 +52,13 @@
       <button type="button" class="back-btn" id="backBtn">← กลับ</button>
     </form>
 
+    <!-- Cancel / Edit list -->
     <div id="eventList" style="display:none;margin-top:12px">
+      <div id="eventItems"></div>
       <button type="button" class="back-btn" id="backFromList">← กลับ</button>
     </div>
 
-
+    <!-- Edit form -->
     <form id="editForm" style="display:none">
       <div class="form-group">
         <label>📋 หัวข้อประชุม</label>
