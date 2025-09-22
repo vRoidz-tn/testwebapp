@@ -28,19 +28,11 @@ body {
   color: #fff;
 }
 
-.form-container {
-  padding: 20px;
-}
+.form-container { padding: 20px; }
 
-.form-group {
-  margin-bottom: 14px;
-}
+.form-group { margin-bottom: 14px; }
 
-label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: 600;
-}
+label { display: block; margin-bottom: 6px; font-weight: 600; }
 
 input {
   width: 100%;
@@ -52,10 +44,7 @@ input {
   box-sizing: border-box;
 }
 
-input:focus {
-  border-color: #9b6bff;
-  outline: none;
-}
+input:focus { border-color: #9b6bff; outline: none; }
 
 .intention-grid {
   display: flex;
@@ -72,17 +61,13 @@ input:focus {
   border-radius: 10px;
   cursor: pointer;
 }
-
 .intention-option.selected {
   background: #8e4fff;
   border-color: #c89fff;
   color: #fff;
 }
 
-.room-grid {
-  display: grid;
-  gap: 8px;
-}
+.room-grid { display: grid; gap: 8px; }
 
 .room-option {
   padding: 10px;
@@ -92,11 +77,7 @@ input:focus {
   cursor: pointer;
   text-align: center;
 }
-
-.room-option:hover {
-  background: #3d2472;
-}
-
+.room-option:hover { background: #3d2472; }
 .room-option.selected {
   background: #8e4fff;
   border-color: #c89fff;
@@ -133,9 +114,7 @@ input:focus {
   cursor: pointer;
 }
 
-#eventList .room-option {
-  margin-bottom: 6px;
-}
+#eventItems .room-option { margin-bottom: 6px; }
 
 #log {
   background: #120a28;
