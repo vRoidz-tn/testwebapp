@@ -54,6 +54,8 @@ function bindUI() {
   document.getElementById('saveEditBtn').onclick = sendEdit;
   document.getElementById('backBtn').onclick = () => toggleForms(true);
   document.getElementById('backFromEdit').onclick = () => toggleForms(true);
+  document.getElementById('backFromList').onclick = () => toggleForms(true);
+
 }
 
 function selectIntent(el) {
