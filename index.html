@@ -9,6 +9,72 @@
   <script defer src="script.js"></script>
 </head>
 <body>
-  <!-- keep the same body content from your code -->
+<div class="container">
+  <div class="header"><h2>💫 Meeting Room Booking</h2></div>
+  <div class="form-container">
+
+    <div id="intentScreen">
+      <label>🎯 เลือกการทำงาน</label>
+      <div class="intention-grid">
+        <div class="intention-option" data-intent="book">📝 จองห้อง</div>
+        <div class="intention-option" data-intent="cancel">❌ ยกเลิก</div>
+        <div class="intention-option" data-intent="edit">✏️ แก้ไข</div>
+      </div>
+    </div>
+
+    <form id="mainForm" style="display:none">
+      <div class="form-group">
+        <label>📋 หัวข้อประชุม</label>
+        <input id="title">
+      </div>
+      <div class="form-group">
+        <label>🏠 เลือกห้อง</label>
+        <div class="room-grid" id="roomGrid">
+          <div class="room-option" data-room="evolve">Evolve Room - 1st floor</div>
+          <div class="room-option" data-room="strategic">Strategic Thinking Room - 2nd floor</div>
+          <div class="room-option" data-room="teamwork">Teamwork Room - 4th floor</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>📅 วันที่</label>
+        <input type="date" id="date">
+      </div>
+      <div class="form-group">
+        <label>⏰ เวลา</label>
+        <div class="time-row">
+          <input type="time" id="start">
+          <input type="time" id="end">
+        </div>
+      </div>
+      <button type="submit" class="submit-btn">ส่ง</button>
+      <button type="button" class="back-btn" id="backBtn">← กลับ</button>
+    </form>
+
+    <div id="eventList" style="display:none;margin-top:12px"></div>
+
+    <form id="editForm" style="display:none">
+      <div class="form-group">
+        <label>📋 หัวข้อประชุม</label>
+        <input id="editTitle">
+      </div>
+      <label>🏠 ห้องใหม่</label>
+      <div class="room-grid" id="newRoomGrid">
+        <div class="room-option" data-room="evolve">Evolve Room - 1st floor</div>
+        <div class="room-option" data-room="strategic">Strategic Thinking Room - 2nd floor</div>
+        <div class="room-option" data-room="teamwork">Teamwork Room - 4th floor</div>
+      </div>
+      <label>📅 เวลาใหม่</label>
+      <div class="time-row">
+        <input type="date" id="newDate">
+        <input type="time" id="newStart">
+        <input type="time" id="newEnd">
+      </div>
+      <button type="button" class="submit-btn" id="saveEditBtn">บันทึก</button>
+      <button type="button" class="back-btn" id="backFromEdit">← กลับ</button>
+    </form>
+
+    <div id="log"><b>Debug:</b><div id="logContent"></div></div>
+  </div>
+</div>
 </body>
 </html>
