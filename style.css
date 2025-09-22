@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #2a1850;
+  color: #eee;
+  padding: 20px;
+}
+
+.container {
+  max-width: 440px;
+  margin: 0 auto;
+  background: #1d1335;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(180,120,255,.5);
+}
+
+.header {
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(45deg,#7938ff,#a45bff);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #fff;
+}
+
+.form-container {
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 9px;
+  border: 2px solid #4b2d88;
+  border-radius: 8px;
+  background: #2b1a4f;
+  color: #eee;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: #9b6bff;
+  outline: none;
+}
+
+.intention-grid {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.intention-option {
+  flex: 1;
+  padding: 14px;
+  text-align: center;
+  background: #3b2670;
+  border: 2px solid #4b2d88;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.intention-option.selected {
+  background: #8e4fff;
+  border-color: #c89fff;
+  color: #fff;
+}
+
+.room-grid {
+  display: grid;
+  gap: 8px;
+}
+
+.room-option {
+  padding: 10px;
+  border: 2px solid #4b2d88;
+  border-radius: 8px;
+  background: #29174b;
+  cursor: pointer;
+  text-align: center;
+}
+
+.room-option:hover {
+  background: #3d2472;
+}
+
+.room-option.selected {
+  background: #8e4fff;
+  border-color: #c89fff;
+  color: #fff;
+}
+
+.time-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(45deg,#a45bff,#ff8cff);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.back-btn {
+  width: 100%;
+  padding: 9px;
+  background: #4b2d88;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+#eventList .room-option {
+  margin-bottom: 6px;
+}
+
+#log {
+  background: #120a28;
+  border: 1px solid #4b2d88;
+  border-radius: 6px;
+  padding: 8px;
+  margin-top: 12px;
+  font-size: 12px;
+  max-height: 150px;
+  overflow-y: auto;
+  color: #ccc;
+}
