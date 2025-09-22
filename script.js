@@ -51,11 +51,11 @@ function bindUI() {
     o.onclick = () => { selectRoom(o, 'newRoomGrid'); newRoom = o.dataset.room; };
   });
   document.getElementById('mainForm').onsubmit = e => { e.preventDefault(); sendMain(); };
+
   document.getElementById('saveEditBtn').onclick = sendEdit;
   document.getElementById('backBtn').onclick = () => toggleForms(true);
   document.getElementById('backFromEdit').onclick = () => toggleForms(true);
   document.getElementById('backFromList').onclick = () => toggleForms(true);
-
 }
 
 function selectIntent(el) {
@@ -84,9 +84,7 @@ async function loadEvents(retry = 0) {
     if (retry < 5) {
       log('User not loaded, retry ' + retry);
       setTimeout(() => loadEvents(retry + 1), 300);
-    } else {
-      log('Give up loading events');
-    }
+    } else { log('Give up loading events'); }
     return;
   }
   try {
@@ -99,7 +97,7 @@ async function loadEvents(retry = 0) {
 }
 
 function renderEvents(list) {
-  const box = document.getElementById('eventList');
+  const box = document.getElementById('eventItems');
   if (!Array.isArray(list) || list.length === 0) {
     box.innerHTML = '<div style="padding:6px">ไม่พบการจอง</div>';
     return;
@@ -108,9 +106,9 @@ function renderEvents(list) {
     <div class="room-option" data-id="${ev.id}">
       <b>${ev.title}</b><br>${ev.room}<br>${ev.date} ${ev.start}-${ev.end}
     </div>`).join('');
-  box.querySelectorAll('.room-option').forEach(div => {
-    div.onclick = () => selectEvent(div.dataset.id, list);
-  });
+  box.querySelectorAll('.room-option').forEach(div =>
+    div.onclick = () => selectEvent(div.dataset.id, list)
+  );
 }
 
 function selectEvent(id, data) {
